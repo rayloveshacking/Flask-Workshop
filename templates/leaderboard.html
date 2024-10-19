@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Voting Website</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+    <body>
+        <div id="leaderboard-page" class="page">
+            <h1>Leaderboard</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Votes</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-table">
+                    {% for choice in choices %} <!-- Iterate through the choices -->
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img src="{{choice.image}}" alt="{{choice.id}}" width="100" height="100"> <!--Get the image src path and the id of the choice-->
+                                    <figcaption>{{choice.id}}</figcaption>
+                                </figure></td>
+                            <td>{{choice.votes}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <br><br>
+            <a class="back-btn" href="/">Back to Voting Page</a>
+        </div>
+    </body>
+</html>

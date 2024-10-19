@@ -1,0 +1,16 @@
+{
+  "choices": [
+    {
+      "id": "C",
+      "caption": "One of the oldest programming languages",
+      "image": "./static/images/programming-language/c.png",
+      "votes": 30
+    },
+    {
+      "id": "Python",
+      "caption": "One of the easiest programming languages",
+      "image": "./static/images/programming-language/python.png",
+      "votes": 12
+    }
+  ]
+}
